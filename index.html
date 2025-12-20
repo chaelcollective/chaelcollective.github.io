@@ -492,41 +492,56 @@
         
         <p class="waitlist-count">Join the growing community waiting to transform their skin journey.</p>
     </section>
-<script>
-document.getElementById('footerForm').addEventListener('submit', function(e) {
-    e.preventDefault();
 
-    const email = document.getElementById('emailInput').value.trim();
-    const name = sessionStorage.getItem('userName') || 'there';
+    <script>
+        document.getElementById('heroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('nameInput').value.trim();
+            
+            if (name) {
+                sessionStorage.setItem('userName', name);
+                
+                const founderSection = document.getElementById('founderSection');
+                if (founderSection) {
+                    founderSection.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }
+            }
+        });
 
-    if (!email) return;
-
-    // MailerLite API endpoint
-    const apiUrl = 'https://api.mailerlite.com/api/v2/subscribers';
-    
-    fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-MailerLite-ApiKey': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNjUxNTI1ZjkwODM5NzNhZDg4OThjMmRkN2QwOWVhYjA1ZGYxMWI5MTVjNWNkOTRjZDk3ZDQ1OGEyMzQ5ZTA4N2IzNTM0ZmM3Y2MxMzBjOWMiLCJpYXQiOjE3NjYyNTM2ODAuNjE3NTU3LCJuYmYiOjE3NjYyNTM2ODAuNjE3NTU5LCJleHAiOjQ5MjE5MjcyODAuNjE0MTE3LCJzdWIiOiIyMDEyMjMwIiwic2NvcGVzIjpbXX0.neZU7E5lLupZR7oxMeIxn6wvwVHD5qTAVS_PWiwhNtpY_6QTtTFZuUiUQb05MxgNI0EVVhddRtGrb546g7PdiKTvlLAY7hU9owoyHTY7nYZxatRBCE813lSFTDuPSY-yLnkYn1FW39m5tzY_nrPv0-p3iWsyphAXvojt_i810koUtprEB1m0uVpJbQjJUDdNdQdaxFE3Oi85Bp9r6yN3xWdgDf0Jiup0DLSxNl3QgomsB0zjcblb3Mlj1zYGe19XhMm2rxSSUfuEXCiUJCDG3agVjITG76LIFuiHxHZDxMxNwkXRcqFgotPa-OT2ytw01hcJwX3ozgx4kOUrjR2EbQnUGohX1M3xi9IJH_hFUxKNryMOi7pGhw6St-oY5IdHZ83DV3RGYKUFdcQshmyTzILYbOFjyvrhABoWnM4ZRxsKdjyW0luX1SjkXTCtmluC1czL7jbgoEn23-iNw2O0vXYZbpJ9DlC--D0VQVt5SKOq4_wuG5YEXfPhI6b1TgNIwFuB8n8j2sJgMNIeILf1NqD3y2yoPhqBl5lyGBqkR4vsmlvdyXGuTzz2RXDpgFs_a8EhhcwskRUupBFjGEGq1qAUtnYkS4J_ObytKG7ZmGESTCqkw_JYt1rgt5XBVXjoRiYIQId2eZ1OI4FRc0QJT_pBE6muM9_PFBcKpRIY7Ro'
-        },
-        body: JSON.stringify({
-            email: email,
-            name: name,
-            groups: [174328631916496855]  // replace with your "Chael Collective Wait-List" group ID
-        })
-    })
-    .then(response => {
-        if (response.ok) {
-            alert(`Thanks ${name}! You're now on the wait-list.`);
-            document.getElementById('footerForm').reset();
+        document.getElementById('footerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            const name = sessionStorage.getItem('userName') || 'there';
+            alert(`Thank you ${name}! Check your email for next steps.`);
+            this.reset();
             sessionStorage.removeItem('userName');
-        } else {
-            alert('Oops! Something went wrong. Try again.');
-        }
-    })
-    .catch(error => console.error('Error:', error));
-});
-</script>
+        });
+
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const fadeElements = document.querySelectorAll('.section, .benefit-card, .vm-card, .founder-note');
+
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s ease-out';
+            fadeObserver.observe(el);
+        });
+    </script>
 </body>
 </html>
