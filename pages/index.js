@@ -72,12 +72,21 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Chael Collective - Breaking the Stigma Around Acne</title>
-        <meta name="description" content="Join a supportive community dedicated to breaking the stigma around acne. Connect with others, access expert resources, and celebrate your skin journey." />
-        <meta name="keywords" content="acne support, skin health, acne community, skincare education, mental health, self-acceptance" />
-        <meta property="og:title" content="Chael Collective - Breaking the Stigma Around Acne" />
-        <meta property="og:description" content="A safe, supportive space where real stories meet expert knowledge." />
-        <meta property="og:type" content="website" />
+        <<title>Chael Collective - Breaking the Stigma Around Acne | Nigeria's #1 Acne Support Community</title>
+  <meta name="description" content="Join Chael Collective, Nigeria's leading supportive community for people dealing with acne. Get expert advice, share your journey, access resources, and break the stigma together. 10,000+ members strong!" />
+  <meta name="keywords" content="acne support Nigeria, acne community Nigeria, skincare Nigeria, acne help Lagos, Chael Collective, acne treatment Nigeria, skin care community, acne mental health support" />
+  
+  {/* Open Graph for Social Media */}
+  <meta property="og:title" content="Chael Collective - Breaking the Stigma Around Acne" />
+  <meta property="og:description" content="Nigeria's supportive community for people dealing with acne. Join 10,000+ members!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chaelcollective.com.ng" />
+  <meta property="og:site_name" content="Chael Collective" />
+  
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chael Collective - Breaking the Stigma Around Acne" />
+  <meta name="twitter:description" content="Join Nigeria's leading acne support community. Expert advice, real stories, and genuine support." />
       </Head>
 
       {/* Hero Section */}
