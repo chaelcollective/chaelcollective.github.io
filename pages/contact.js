@@ -31,10 +31,14 @@ export default function Contact() {
   return (
     <Layout>
       <Head>
-        <title>Contact Us - Chael Collective</title>
-        <meta name="description" content="Get in touch with Chael Collective. We're here to answer your questions, hear your feedback, and connect with our community." />
-        <meta property="og:title" content="Contact Us - Chael Collective" />
-        <meta property="og:description" content="Get in touch with the Chael Collective team." />
+        <title>Contact Us - Get in Touch with Chael Collective Nigeria</title>
+  <meta name="description" content="Contact Chael Collective for questions, partnerships, or support. Join our community via WhatsApp, email, or social media. Connect with Nigeria's leading acne support community." />
+  <meta name="keywords" content="contact Chael Collective, acne support contact Nigeria, reach Chael Collective, join acne community" />
+  
+  <meta property="og:title" content="Contact Chael Collective" />
+  <meta property="og:description" content="Get in touch with Nigeria's leading acne support community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chaelcollective.com.ng/contact" />
       </Head>
 
       {/* Hero */}
