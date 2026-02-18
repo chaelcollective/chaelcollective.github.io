@@ -105,11 +105,14 @@ export default function Blog() {
   return (
     <Layout>
       <Head>
-        <title>Resources & Blog - Chael Collective</title>
-        <meta name="description" content="Evidence-based articles, expert insights, and community stories about acne, skincare, mental health, and self-acceptance." />
-        <meta name="keywords" content="acne resources, skincare blog, mental health, acne stories, skincare science" />
-        <meta property="og:title" content="Resources & Blog - Chael Collective" />
-        <meta property="og:description" content="Evidence-based articles and community stories about acne and skincare." />
+          <title>Acne Resources & Blog - Expert Skincare Advice | Chael Collective Nigeria</title>
+  <meta name="description" content="Evidence-based articles, expert skincare tips, and real acne stories from Nigeria. Learn about acne treatment, mental health, barrier repair, and skincare science from Chael Collective's trusted resources." />
+  <meta name="keywords" content="acne blog Nigeria, skincare tips Nigeria, acne treatment advice, skin barrier repair, acne mental health, skincare resources Lagos, Nigerian skincare blog" />
+  
+  <meta property="og:title" content="Acne Resources & Blog - Chael Collective" />
+  <meta property="og:description" content="Evidence-based skincare articles and community stories from Nigeria's #1 acne support community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chaelcollective.com.ng/blog" />
       </Head>
 
       {/* Hero */}
