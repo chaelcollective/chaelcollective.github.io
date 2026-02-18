@@ -41,10 +41,14 @@ export default function About() {
   return (
     <Layout>
       <Head>
-        <title>About Us - Chael Collective</title>
-        <meta name="description" content="Learn about Chael Collective's mission to break the stigma around acne and create a supportive community for everyone on their skincare journey." />
-        <meta property="og:title" content="About Us - Chael Collective" />
-        <meta property="og:description" content="Our story, mission, and the team behind Chael Collective." />
+         <title>About Us - Chael Collective | Our Mission to End Acne Stigma in Nigeria</title>
+  <meta name="description" content="Learn about Chael Collective's mission to break the stigma around acne in Nigeria. Meet our team, discover our story, and join our growing community of 10,000+ members dedicated to supporting each other." />
+  <meta name="keywords" content="about Chael Collective, acne stigma Nigeria, skincare mission, acne support team Nigeria" />
+  
+  <meta property="og:title" content="About Chael Collective - Our Story & Mission" />
+  <meta property="og:description" content="Breaking the stigma around acne through community, education, and support in Nigeria." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chaelcollective.com.ng/about" /
       </Head>
 
       {/* Hero */}
